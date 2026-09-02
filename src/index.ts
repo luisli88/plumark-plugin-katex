@@ -12,10 +12,10 @@ import katexCss from "katex/dist/katex.min.css";
 import themeCss from "./theme.css";
 
 /**
- * Mismo shape que `PluginThemeContext` de `@markdown-editor/plugin-sdk` — no
+ * Mismo shape que `PluginThemeContext` de `@plumark/plugin-sdk` — no
  * se declara como dependencia de npm (ese paquete es privado al monorepo,
  * sin publicar); el contrato completo está documentado en el `README.md` de
- * `plugin-sdk` (github.com/luisli88/MarkdownEditor).
+ * `plugin-sdk` (github.com/luisli88/PluMark).
  */
 interface PluginThemeContext {
   mode: "light" | "dark";
@@ -28,7 +28,7 @@ interface PluginThemeContext {
   accent: string;
 }
 
-/** Mismo shape que `SyntaxGrammar` de `@markdown-editor/plugin-sdk`. */
+/** Mismo shape que `SyntaxGrammar` de `@plumark/plugin-sdk`. */
 interface SyntaxGrammar {
   caseInsensitive?: boolean;
   keywords?: Record<string, string>;
@@ -102,7 +102,7 @@ function getSyntaxGrammar(): SyntaxGrammar {
  * "Insertar" — inserta un bloque nuevo con esta expresión de ejemplo en vez
  * de arrancar vacío (una fórmula vacía no renderiza nada útil como primer
  * vistazo). `icon`: nombre de SF Symbol que el host usa para el botón
- * (`@markdown-editor/plugin-sdk`) — "function" (ƒ(x)) es la metáfora visual
+ * (`@plumark/plugin-sdk`) — "function" (ƒ(x)) es la metáfora visual
  * de "fórmula" en el set de símbolos de Apple.
  */
 function getInsertMenuItem(): { label: string; defaultSource: string; icon: string } {

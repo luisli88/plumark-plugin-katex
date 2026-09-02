@@ -1,15 +1,15 @@
 # markdown-editor-plugin-katex
 
-A [MarkdownEditor](https://github.com/luisli88/MarkdownEditor) third-party plugin that renders
+A [PluMark](https://github.com/luisli88/PluMark) third-party plugin that renders
 ```katex ...``` blocks as math using [KaTeX](https://katex.org/).
 
-Second reference implementation of the [public plugin contract](https://github.com/luisli88/markdown-editor-plugin-sdk),
+Second reference implementation of the [public plugin contract](https://github.com/luisli88/PluMark/tree/main/packages/plugin-sdk),
 alongside the bundled Mermaid plugin — installed the same way any third-party plugin is: paste this
-repo's URL into MarkdownEditor's plugin install dialog.
+repo's URL into PluMark's plugin install dialog.
 
 ## Install
 
-In MarkdownEditor, open plugin management and paste:
+In PluMark, open plugin management and paste:
 
 ```text
 https://github.com/luisli88/markdown-editor-plugin-katex
@@ -27,11 +27,11 @@ c = \pm\sqrt{a^2 + b^2}
 ```
 ````
 
-Formula text color follows MarkdownEditor's active theme via `PluginThemeContext`, the second
-argument the app passes to `render()` (see `PluginThemeContext` in `@markdown-editor/plugin-sdk`).
+Formula text color follows PluMark's active theme via `PluginThemeContext`, the second
+argument the app passes to `render()` (see `PluginThemeContext` in `@plumark/plugin-sdk`).
 The `code_block` language selector and the diagram edit mode's live overlay syntax-highlight
 `katex` blocks using the grammar this plugin declares via `getSyntaxGrammar()` (see `SyntaxGrammar`
-in `@markdown-editor/plugin-sdk`) — resolved once when the plugin loads, not per render.
+in `@plumark/plugin-sdk`) — resolved once when the plugin loads, not per render.
 
 ## Develop
 
