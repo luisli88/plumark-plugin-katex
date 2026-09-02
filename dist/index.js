@@ -14528,7 +14528,16 @@ var syntaxGrammar = {
 function getSyntaxGrammar() {
   return syntaxGrammar;
 }
-var index_default = { render: render3, export: exportFormula, getSyntaxGrammar, getStylesheet };
+function getInsertMenuItem() {
+  return { label: "F\xF3rmula", defaultSource: "a^2 + b^2 = c^2", icon: "function" };
+}
+var index_default = {
+  render: render3,
+  export: exportFormula,
+  getSyntaxGrammar,
+  getStylesheet,
+  getInsertMenuItem
+};
 export {
   index_default as default
 };

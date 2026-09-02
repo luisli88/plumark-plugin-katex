@@ -97,4 +97,22 @@ function getSyntaxGrammar(): SyntaxGrammar {
   return syntaxGrammar;
 }
 
-export default { render, export: exportFormula, getSyntaxGrammar, getStylesheet };
+/**
+ * §7 diseño de contribuciones de plugin: ítem del menú/toolbar nativo
+ * "Insertar" — inserta un bloque nuevo con esta expresión de ejemplo en vez
+ * de arrancar vacío (una fórmula vacía no renderiza nada útil como primer
+ * vistazo). `icon`: nombre de SF Symbol que el host usa para el botón
+ * (`@markdown-editor/plugin-sdk`) — "function" (ƒ(x)) es la metáfora visual
+ * de "fórmula" en el set de símbolos de Apple.
+ */
+function getInsertMenuItem(): { label: string; defaultSource: string; icon: string } {
+  return { label: "Fórmula", defaultSource: "a^2 + b^2 = c^2", icon: "function" };
+}
+
+export default {
+  render,
+  export: exportFormula,
+  getSyntaxGrammar,
+  getStylesheet,
+  getInsertMenuItem,
+};
